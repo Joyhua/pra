@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>在线测试</title>
+    <meta charset="UTF-8">
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="screen-orientation" content="portrait">
+    <!-- uc强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+
+    <script>
+      var deviceWidth = document.documentElement.clientWidth;
+      if(deviceWidth > 640) deviceWidth = 640;
+      document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    </script>
+  </head>
+
+  <body>
+    <div class="contain">
+      <section>
+        <header class="title-h absolute-header">
+          <div class="left">
+            <span class="n">1</span> <em>|</em>
+            <span style="color: #fd9321;">30</span>
+          </div>
+          <div class="right timer-selector">
+            <span class="m">00</span>:
+            <span class="s">00</span>
+          </div>
+        </header>
+      </section>
+      <section>
+        <div class="practice-c-w">
+          <h1>第<i class="n">1</i>题</h1>
+          <ul class="practice-ul">
+            <li data-num="0" class="active">
+              <p class="question">——Who`s the handsome boy talking with our English teacher over three? </p>
+              <p class="answer">——A boy __Justin,He is our monitor.</p>
+              <div class="p-chose">
+                <div>
+                  <span>A.calls</span>
+                  <span class="radio relative">
+                    <input type="radio" name="question1" value="A" /><label></label></span>
+                </div>
+                <div>
+                  <span>B.calls</span>
+                  <span class="radio relative">
+                    <input type="radio" name="question1" value="B" /><label></label></span>
+                </div>
+                <div>
+                  <span>C.calls</span>
+                  <span class="radio relative">
+                    <input type="radio" name="question1" value="C" /><label></label></span>
+                </div>
+                <div>
+                  <span>D.calls</span>
+                  <span class="radio relative">
+                    <input type="radio" name="question1" value="D" /><label></label></span>
+                </div>
+              </div>
+            </li>
+            <li data-num="1">
+            	<p class="question">——Who`s the handsome? </p>
+              <p class="answer">——A boy __Justin.</p>
+              <div class="p-chose">
+                <div>
+                  <span>A.calls</span>
+                  <span class="radio relative">
+                    <input type="radio" name="question1" value="A" /><label></label></span>
+                </div>
+                <div>
+                  <span>B.calls</span>
+                  <span class="radio relative">
+                    <input type="radio" name="question1" value="B" /><label></label></span>
+                </div>
+                <div>
+                  <span>C.calls</span>
+                  <span class="radio relative">
+                    <input type="radio" name="question1" value="C" /><label></label></span>
+                </div>
+                <div>
+                  <span>D.calls</span>
+                  <span class="radio relative">
+                    <input type="radio" name="question1" value="D" /><label></label></span>
+                </div>
+              </div>
+            </li>
+            <li data-num="2" class="active">
+              <p class="question">——Who`s the handsome boy talking with our English teacher over three? </p>
+              <p class="answer">——A boy __Justin,He is our monitor.</p>
+              <div class="p-chose">
+                <div>
+                  <span>A.calls</span>
+                  <span class="radio relative">
+                    <input type="radio" name="question1" value="A" /><label></label></span>
+                </div>
+                <div>
+                  <span>B.calls</span>
+                  <span class="radio relative">
+                    <input type="radio" name="question1" value="B" /><label></label></span>
+                </div>
+                <div>
+                  <span>C.calls</span>
+                  <span class="radio relative">
+                    <input type="radio" name="question1" value="C" /><label></label></span>
+                </div>
+                <div>
+                  <span>D.calls</span>
+                  <span class="radio relative">
+                    <input type="radio" name="question1" value="D" /><label></label></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="practice-submit flex-box">
+          <button class="prev">上一道</button>
+          <button class="next" data-num="2">下一道</button>
+          <button class="submit">提交</button>
+        </div>
+      </section>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/dialog.js"></script>
+    <script type="text/javascript" src="js/title.js"></script>
+  </body>
+
+</html>

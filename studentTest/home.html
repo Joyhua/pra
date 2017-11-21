@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+  <title>学生在线测试系统</title>
+  <meta charset="UTF-8">
+  <link href="css/reset.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="screen-orientation" content="portrait">
+  <!-- uc强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+
+  <script>
+   var deviceWidth = document.documentElement.clientWidth;
+   if(deviceWidth > 640) deviceWidth = 640;
+   document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  </script>
+ </head>
+
+ <body style="width:7.5rem">
+  <div class="container">
+   <div id="menu">
+   	<div id="nav">
+   		<button class="difficult_chose">选择测试难度</button>
+   		<div class="nav_next"><a href="record.html">我的测试记录</a><em>|</em><a href="infomation.html">学生信息填写</a></div>
+   	</div>
+   </div>
+   <div class="home_logo_w">
+   	学生在线测试系统
+   </div>
+   
+   <!--难度选择弹出-->
+   
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+   <script type="text/javascript" src="js/dialog.js"></script>
+   <script type="text/javascript" src="js/home.js"></script>
+   
+
+ </body>
+
+</html>

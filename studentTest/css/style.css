@@ -1,0 +1,99 @@
+@font-face {
+	font-family:'pingFang-sc';
+	src: lacal('pingFang-sc'), url('../font/PingFang_SC_Regular.eot');
+	src:url('../font/PingFang_SC_Regular.eot?#iefix') format('embedded-opentype'),
+		url('../font/PingFang_SC_Regular.woff') format('woff'),
+		url('../font/PingFang_SC_Regular.ttf') format('truetype'),
+		url('../font/PingFang_SC_Regular.svg#pingFang-sc') format('svg');
+		
+}
+
+.left{float: left;}
+.right{float:right;}
+html,body,a,div,span,em,input,p,textarea,ul,li,i,small,dt,dl,dd{font-family: 'pingFang-sc',"Helvetica Neue", Helvetica, STHeiTi, Arial, "microsoft yahei",'微软雅黑','Heiti','黑体','simsun','宋体',sans-serif;}
+.container{position:fixed;top:0;bottom:0;left:0;right:0;z-index:1;background: url(../images/back.png) center center no-repeat ;background-size: 100%;}
+.relative{position: relative;z-index: 1;}
+.flex-box{display:-webkit-flex;display: flex;flex-direction:row ;flex-wrap: nowrap;justify-content: center;align-items: center;}
+
+.home_logo_w{margin: 1.2rem 0 .82rem 0;text-align: center;color: #f1f9ff;font-size: .44rem;}
+#menu #nav {display:block;width:100%;padding:0;margin:0;position:fixed;bottom:1.35rem;z-index: 666;height: 1.8rem;}
+#menu button{display:block;border:none;height: .78rem;background-color: #fff;color: #358bdb;font-size: .40rem;text-align: center;line-height: .78rem;width: 4.8rem;margin:auto;-webkit-border-radius: .5rem;-moz-border-radius: .5rem;border-radius: .5rem;}
+#menu .nav_next{text-align: center;color: #fff;margin-top: .52rem;font-size: .26rem;}
+#menu .nav_next a{color: inherit;display: inline-block;}
+#menu .nav_next em{margin: 0 .54rem;color: inherit;height: .24rem;display: inline-block;font-style: normal;}
+
+/*测试记录*/
+.absolute-header{height: .9rem;position: fixed;top: 0;left: 0;right: 0;}
+.record-header{background-color: #a2cdff;}
+.record-header div{text-align: center;word-wrap: break-word;word-break: break-all;width: 25%;font-size: .32rem;color: #fefefe;}
+.record-wrap{margin-top: .9rem;}
+.record-wrap table{width: 100%;border-collapse: collapse;font-size: .28rem;border-spacing: 0;}
+.record-wrap table tr{border-bottom: .01rem solid #e9e9e9;background-color: #fff;}
+.record-wrap table tr td{padding:.2rem .05rem;color: #333;text-align: center;width: 25%;word-wrap:break-word;word-break: break-all;}
+.record-wrap table .single{background-color: #fafcfd;}
+.record-none{position: fixed;top: .9rem;bottom: 0;left: 0;right: 0;background-color:#fff ;}
+.record-none > div{margin:auto;width: 4rem;margin-top: 2.9rem;font-size: .3rem;color: #000;text-align: center;}
+.record-none > div img{width: 100%;}
+.record-none > div p{color: inherit;font-size: inherit;margin-top: .1rem;}
+
+/*学生信息填写*/
+.head-pic-wrap{width: 1.44rem;margin: .9rem auto;text-align: center;font-size: .30rem;}
+.head-pic-wrap img{width: 1.44rem;height: 1.44rem;-webkit-border-radius: .2rem;-moz-border-radius: .2rem;border-radius: .2rem;}
+.head-pic-wrap .change-head-pic,.head-pic-wrap .change-head-pic input[type=file],.head-pic-wrap p{position: absolute;z-index:1;bottom: 0;height: .4rem;left: 0;right: 0;}
+.head-pic-wrap .change-head-pic{background-color: rgba(0,0,0,.4);-webkit-border-radius:0 0 .2rem .2rem;-moz-border-radius:0 0 .2rem .2rem;border-radius:0 0 .2rem .2rem;}
+.change-head-pic input[type=file]{z-index: 5;opacity: 0;filter: alpha(opacity=0);}
+.stu-info-sec{width: 4.28rem;margin: auto;}
+.head-pic-wrap p{line-height: .4rem;color: #fff;font-size: inherit;text-align: inherit;}
+.stu-info-wrap>div{margin: .4rem 0;font-size: 0;}
+.stu-info-wrap>div label,.stu-info-wrap>div span{display: inline-block;color: #000;font-size: .30rem;vertical-align: bottom;height: .45rem;}
+.stu-info-wrap>div span{border-bottom: .02rem solid #ddddde;}
+.stu-info-wrap>div label{width: 1.26rem;}
+.stu-info-wrap>.short label{width: .76rem;}
+.stu-info-wrap>.short span input{width: 3.36rem;}
+.stu-info-wrap>.middle label{width: 1.02rem;}
+.stu-info-wrap>.middle span input{width: 3rem;}
+.stu-info-wrap>div span input{border: none;height: .35rem;vertical-align: top;padding: .05rem;width: 2.76rem;}
+.confirm-wrap{margin: .64rem auto;text-align: center;font-size: .3rem;}
+.confirm-wrap input{width: 3.22rem;height: .66rem;line-height: .66rem;color: #fff;-webkit-border-radius: .3rem;-moz-border-radius: .3rem;border-radius: .3rem;background-color: #3b6fb2;}
+
+/*题目*/
+.title-h{background-color: #e8f1f8;padding: 0 .32rem;}
+.title-h div{line-height: .9rem;font-size: .26rem;}
+.practice-submit{position: fixed;z-index: 555;bottom: 1.55rem;text-align: center;left: 0;right: 0;justify-content:space-around;}
+.practice-submit button{background-color:#3483d4;border:none;width: 2.14rem;height: .64rem;text-align: center;line-height: .64rem;color: #fff;font-size: .3rem;-webkit-border-radius: .3rem;-moz-border-radius: .3rem;border-radius: .3rem;}
+.practice-submit .submit{background-color: #ff9d02;}
+.practice-submit .prev,.practice-submit .submit{display: none;}
+.practice-c-w{margin: 1.4rem 0 0;}
+.practice-c-w h1{font-size: .4rem;text-align: center;margin: 0 .32rem .4rem;}
+.practice-ul{list-style: none;width: 800%;overflow: hidden;}
+.practice-ul li{float: left;width: 7.5rem;position: relative;padding: 0 .32rem;}
+.question,.answer,.p-chose div{font-size: .26rem;color: #000;}
+.p-chose{margin: .5rem 0;}
+.p-chose div{border-bottom: .01rem solid #e7e7e7;line-height: .86rem;}
+.p-chose>div>span:first-child{width: 80%;display: inline-block;}
+.p-chose>div>span:last-child{width: 15%;vertical-align: top;margin-top: .1rem;}
+.p-chose .radio,.p-chose .radio label:after,.p-chose .radio input[type=radio]{display: inline-block;width: .6rem;height: .6rem;}
+.p-chose .radio{text-align: right;padding-right: .1rem;}
+.p-chose .radio label:after{content:' ';background:url(../images/radio1.png) no-repeat center center ;background-size: 80%;}
+.p-chose .radio input[type=radio]{opacity:0;position: absolute;z-index: 555;top: 0;bottom: 0;right: .1rem;}
+.p-chose .radio input:checked+label:after{background-image: url(../images/radio2.png);}
+
+/*弹窗*/
+.dialog_b{position: fixed;z-index:999;top: 0;bottom: 0;left: 0;right: 0;background-color: rgba(0,0,0,.5);z-index: 999;}
+.dialog-sec{width: 4.5rem;background-color: #f7fbff;-webkit-border-radius: .4rem;-moz-border-radius: .4rem;border-radius: .4rem;position: fixed;z-index: 999;top: 0;bottom: 0;left: 0;right: 0;margin: auto;height: 5.9rem;}
+.dialog-sec ul{list-style: none;}
+.dialog-sec .dialog-title{-webkit-border-radius: .4rem .4rem 0 0;-moz-border-radius: .4rem .4rem 0 0;border-radius: .4rem .4rem 0 0;color: #fff;background-color: #73a8e6;height: .9rem;line-height: .9rem;}
+.dialog-sec .dialog-title,.dialog-sec ul a{text-align: center;font-size: .30rem;}
+.dialog-sec ul a{display: block;height: 1rem;line-height: 1rem;color: #333;}
+.dialog-result .dialog-title{background-color: transparent;}
+.dialog-result .dialog-title >span{display: block;width: 2.72rem;height: .66rem;-webkit-border-radius: .2rem;-moz-border-radius: .2rem;border-radius: .2rem;line-height: .66rem;border: .02rem solid #467cb9;color: #467cb9;text-align: center;font-size: .32rem;margin: .4rem auto;}
+.dialog-result .dialog-title .icon{display: inline-block;vertical-align: top;height: .62rem;width: .7rem;background: url(../images/result.png) no-repeat left center;background-size: 70% 90%;}
+.dialog-result ul {width: 2.3rem;margin: .30rem auto;}
+.dialog-result ul li{font-size: 0;}
+.dialog-result ul li >span{display: inline-block;font-size: .3rem;line-height: .68rem;}
+.dialog-result ul li >span:first-child{color: #999;}
+.dialog-result ul li >span:last-child{color: #363636;}
+.dialog-result .okLink{border: none;width:2.16rem;background-color:#3483d4;height: .64rem;text-align: center;line-height: .64rem;color: #fff;font-size: .3rem;-webkit-border-radius: .3rem;-moz-border-radius: .3rem;border-radius: .3rem;display: block;margin: .4rem auto;}
+.dialog-alert{font-size:.22rem;-webkit-border-radius: .2rem;-moz-border-radius: .2rem;border-radius: .2rem;position: fixed;z-index: 999;width: 1.74rem;text-align:center;height: 1.74rem;top: 0;right: 0;left: 0;bottom: 0;margin: auto;color: #fff;background-color:rgba(0,0,0,.8);}
+.dialog-alert img{width: .7rem;height: .7rem;margin: .3rem auto .16rem;display: block;}
+.dialog-alert p{font-size: inherit;}

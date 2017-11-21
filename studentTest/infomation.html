@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+  <title>学生信息填写</title>
+  <meta charset="UTF-8">
+  <link href="css/reset.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="screen-orientation" content="portrait">
+  <!-- uc强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+
+  <script>
+   var deviceWidth = document.documentElement.clientWidth;
+   if(deviceWidth > 640) deviceWidth = 640;
+   document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  </script>
+ </head>
+
+ <body>
+  <div class="contain">
+  	<section>
+  		<div class="head-pic-wrap relative">
+  			<img src="images/1.png" alt="head pic" />
+  			<div class="change-head-pic">
+  				<input type="file" />
+  			</div>
+  			<p>更换头像</p>
+  		</div>
+  	</section>
+  	<section class="stu-info-sec">
+  				<div class="stu-info-wrap">
+  					<div class="short"><label for="name">名字</label><span><input type="text" id="name"/></span></div>
+  					<div class="short"><label for="name">学校</label><span><input type="text" id="name"/></span></div>
+  					<div class="middle"><label for="name">手机号</label><span><input type="text" id="name"/></span></div>
+  					<div><label for="name">培训经历</label><span><input type="text" id="name"/></span></div>
+  					<div><label for="name">学校成绩</label><span><input type="text" id="name"/></span></div>
+  					
+  				</div>
+  				<div class="confirm-wrap">
+  					<input type="button" id="confirm" value="保存"/>
+  				</div>
+  				
+  		
+  	</section>
+  </div>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+   <script type="text/javascript" src="js/dialog.js"></script>
+   <script type="text/javascript" src="js/information.js"></script>
+ </body>
+
+</html>

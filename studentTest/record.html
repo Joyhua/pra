@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+  <title>我的测试记录</title>
+  <meta charset="UTF-8">
+  <link href="css/reset.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="screen-orientation" content="portrait">
+  <!-- uc强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+
+  <script>
+   var deviceWidth = document.documentElement.clientWidth;
+   if(deviceWidth > 640) deviceWidth = 640;
+   document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+  </script>
+ </head>
+
+ <body>
+  <div class="contain">
+  	<header class="record-header absolute-header flex-box">
+  		<div>时间</div>
+  		<div>难度</div>
+  		<div>分数</div>
+  		<div>接待咨询老师</div>
+  	</header>
+  	
+	<section class="record-wrap">
+		<!--have record-->
+		<!--<table>
+			<tr class="single"><td>2017-11-16</td><td>一年学习经验</td><td>66</td><td>刘德华</td></tr>
+			<tr><td>2017-11-16</td><td>一年学习经验</td><td>66</td><td>刘德华</td></tr>
+		</table>-->
+		
+		<!--have no record-->
+		<div class="record-none">
+			<div>
+			<img src="images/none.png" alt="no record" title="no record" />
+			<p>暂时还没有记录!</p>
+			</div>
+		</div>
+	</section>	
+  </div>
+   
+ </body>
+
+</html>
