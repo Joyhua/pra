@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>听力为王</title>
+    <meta charset="UTF-8">
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="screen-orientation" content="portrait">
+    <!-- uc强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+
+    <script>
+      var deviceWidth = document.documentElement.clientWidth;
+      if(deviceWidth > 640) deviceWidth = 640;
+      document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    </script>
+  </head>
+
+  <body style="width:7.5rem">
+    <div class="ch_b"></div>
+    <div class="choose_w">
+      <ul class="nav_ul">
+        <li class="left">
+          <a href="home.html" class="nav_home_link">
+            <div class="nav_bottom_home">
+              <span class="current_active"></span>
+            </div>
+            <p>主页</p>
+          </a>
+        </li>
+        <li class="right">
+          <a class="nav_ch_link">
+            <div class="nav_bottom_ch">
+              <span></span>
+            </div>
+            <p>兑换</p>
+          </a>
+        </li>
+      </ul>
+      <div class="ca_w">
+      	<button class="current_active">已通关</button>
+      	<button>未通关</button>
+      </div>
+      <div class="con_w">
+        <div class="info_w">
+          <div style="text-align: center;font-size: 0;">
+            <span class="per_w"><img src="images/1.png" alt="head" /></span>
+            <span class="info_s">
+              <div>Unicon</div>
+              <div>
+                <span class="icons_h"></span>新手上路</div>
+            </span>
+          </div>
+          <div class="info_b_w">
+            <span class="left">排名：42</span>
+            <span class="right">奇迹币：325</span>
+          </div>
+        </div>
+        <div class="progress_w">
+          <div class="left" style="width: 20%;">总关数</div>
+          <div class="right" style="width:79%;">
+            <div class="pro_num">
+              <div>1200/1400</div>
+              <div></div>
+            </div>
+            <div class="pro_in">
+              <progress max="1400" value="1200"></progress>
+            </div>
+          </div>
+        </div>
+      <div class="choose_btn_w">
+      	<div class="local-w">
+      		<img src="images/1.png"/>
+      		你在这儿！
+      	</div>
+      	
+      	<div class="l_w">
+      		你在这儿！
+      		<img src="images/1.png"/>
+      	</div>
+      	
+		<div class="ch_btn-c">
+			<div class="single"><a class="active" href="topic.html">1</a></div>
+			<div class="du_icon"></div>
+			<div class="dubble"><a class="active" href="topic.html">2</a></div>
+			<div class="si_icon"></div>
+			<div class="single"><a class="active" href="topic.html">3</a></div>
+			<div class="du_icon"></div>
+			<div class="dubble"><a class="active" href="topic.html">4</a></div>
+			<div class="si_icon"></div>
+			<div class="single"><a class="active" href="topic.html">5</a></div>
+			<div class="du_icon"></div>
+			<div class="dubble"><a href="topic.html">6</a></div>
+			<div class="si_icon"></div>
+			<div class="single"><a href="topic.html">7</a></div>
+			<div class="du_icon"></div>
+			<div class="dubble"><a href="topic.html">8</a></div>
+			<div class="si_icon"></div>
+			<div class="single"><a href="topic.html">9</a></div>
+			
+		</div>
+	</div>
+      </div>
+
+	
+    </div>
+
+    <script src="js/zepto.min.js"></script>
+    <script src="js/choose.js"></script>
+    
+  </body>
+
+</html>

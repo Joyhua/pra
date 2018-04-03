@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>听力为王</title>
+    <meta charset="UTF-8">
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="screen-orientation" content="portrait">
+    <!-- uc强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+
+    <script>
+      var deviceWidth = document.documentElement.clientWidth;
+      if(deviceWidth > 640) deviceWidth = 640;
+      document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    </script>
+  </head>
+
+  <body style="width:7.5rem">
+
+    <div class="body_back"></div>
+    <div class="body_b_b"></div>
+    <div class="container_w">
+      <h1>第3关</h1>
+      <div class="audio_w">
+        <div class='jAudio--player'>
+
+          <audio></audio>
+
+          <div class='jAudio--ui' style="font-size: 0;">
+						<span class='jAudio--controls' style="margin-right: .4rem;">
+              <button class='btn' data-action='play' id='btn-play'></button>
+          </span>
+            <span class='jAudio--status-bar'>
+
+              <div class='jAudio--details'></div>
+              <div class='jAudio--volume-bar'></div>
+								 <div class='jAudio--time'>
+                <span class='jAudio--time-elapsed'>00:00</span>
+                <em>/</em>
+                <span class='jAudio--time-total'>00:00</span>
+              </div>
+              <div class='jAudio--progress-bar'>
+                <div class='jAudio--progress-bar-wrapper'>
+                  <div class='jAudio--progress-bar-played'>
+                    <span class='jAudio--progress-bar-pointer'></span>
+                  </div>
+                </div>
+              </div>
+
+             
+
+            </span>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="topic_l_w">
+        <dl>
+          <dt>1、请选择正确的答案</dt>
+          <dd>
+            <span class="topic_c_s relative">
+              <input name="radio" type="radio" /><label></label></span>
+            <span>A.He did his homework</span>
+          </dd>
+          <dd>
+            <span class="topic_c_s relative">
+              <input name="radio" type="radio" /><label></label></span>
+            <span>B.He did his homework</span>
+          </dd>
+          <dd>
+            <span class="topic_c_s relative">
+              <input name="radio" type="radio" /><label></label></span>
+            <span>C.He did his homework</span>
+          </dd>
+          <dd>
+            <span class="topic_c_s relative">
+              <input name="radio" type="radio" /><label></label></span>
+            <span>D.He did his homework</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt>1、请选择正确的答案</dt>
+          <dd>
+            <span class="topic_c_s relative">
+              <input name="radio" type="radio" /><label></label></span>
+            <span>A.He did his homework</span>
+          </dd>
+          <dd>
+            <span class="topic_c_s relative">
+              <input name="radio" type="radio" /><label></label></span>
+            <span>B.He did his homework</span>
+          </dd>
+          <dd>
+            <span class="topic_c_s relative">
+              <input name="radio" type="radio" /><label></label></span>
+            <span>C.He did his homework</span>
+          </dd>
+          <dd>
+            <span class="topic_c_s relative">
+              <input name="radio" type="radio" /><label></label></span>
+            <span>D.He did his homework</span>
+          </dd>
+        </dl>
+      </div>
+      <div class="topic_ctrl_w">
+        <a href="javascript:window.history.go(-1);">返回</a>
+        <input type="submit" value="提交" />
+      </div>
+    </div>
+    
+    <div class="dialog_b"></div>
+    <div class="dialog_w">
+    	<span class="close"></span>
+    	<div>你还有<em>2</em>道题没做完哦</div>
+    	<div>
+    		<button>重新做题</button>
+    	</div>
+    </div>
+    
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/jaudio.js"></script>
+    <script type="text/javascript" src="js/topic.js"></script>
+
+  </body>
+
+</html>
