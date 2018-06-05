@@ -13,21 +13,21 @@ function compareDESCFun(a, b) { //降序：从大到小
 
 function compareParityFun1(a, b) { //奇偶排序:奇数在前，偶数在后
     var a = a % 2,
-        b = b % 2;
+    b = b % 2;
     if (a == 0) return 1;
     if (b == 0) return -1;
 }
 
 function compareParityFun2(a, b) { //奇偶排序:偶数在前，奇数在后
     var a = a % 2,
-        b = b % 2;
+    b = b % 2;
     if (a == 0) return -1;
     if (b == 0) return 1;
 }
 
 function compareLetterFun(a, b) { //不区分大小写按升序排序
     var a = a.toLowerCase,
-        b = toLowerCase;
+    b = toLowerCase;
     if (a < b) {
         return 1;
     } else {
@@ -65,9 +65,9 @@ function uniquelFun(array) {
         if (!Array.prototype.indexOf) {
             Array.prototype.indexOf = function(item) {
                 var that = this,
-                    t_len = that.length,
-                    result = -1,
-                    a_item = null;
+                t_len = that.length,
+                result = -1,
+                a_item = null;
                 if (t_len === 0) {
                     return result;
                 }
@@ -94,9 +94,9 @@ function uniquelFun(array) {
 /*方法二：对象键值对法 速度最快，占用空间最多(原理:相同键的数据被后面的覆盖)*/
 function keyAndValueFun(array) {
     var n = {},
-        r = [],
-        len = array.length,
-        val, type;
+    r = [],
+    len = array.length,
+    val, type;
     for (var i = 0; i < len; i++) {
         val = array[i];
         type = typeof val;
@@ -105,11 +105,11 @@ function keyAndValueFun(array) {
             n[val] = [type];
             r[r.length] = val;
         } else if (n[val].indexOf(type) < 0) { //判断是否为js对象键时，会自动对传入的键执行“toString()”，不同的键可能会被误认为一样；例如： a[1]、a["1"].
-            n[val].push(type);
-            r[r.length] = val;
-        }
+        n[val].push(type);
+        r[r.length] = val;
     }
-    return r;
+}
+return r;
 }
 /*方法三：数组下标判断法（如果当前数组的第i项在当前数组中第一次出现的位置不是i，那么表示第i项是重复的，忽略掉。否则存入结果数组,此方法其实有点类似遍历法）*/
 function arrIndexFun(array) {
@@ -195,7 +195,7 @@ function isOnlyNumberAndLetter(str) {
  * @param num 数
  * @return 修改后的数字
  */
-function getFullDate(num) {
+ function getFullDate(num) {
     if (num < 10 && num >= 0) {
         return '0' + num;
     } else {
@@ -207,7 +207,7 @@ function getFullDate(num) {
  * @param { Date } value 时间格式为 系统获取的时间
  * @return 格式化后的时间 例如 2017-12-09
  */
-function dateFormatterforDay(value) {
+ function dateFormatterforDay(value) {
     const year = value.getFullYear();
     const month = getFullDate(value.getMonth() + 1);
     const date = getFullDate(value.getDate());
@@ -219,7 +219,7 @@ function dateFormatterforDay(value) {
  * @param {number} value  多少天前
  * @return value天前格式化后的时间 例如 2017-12-09
  */
-function dateFormatterforDaysAgo(value) {
+ function dateFormatterforDaysAgo(value) {
     const today = new Date();
     const resultDay = new Date(today.getTime() - 1000 * 60 * 60 * 24 * value);
     return dateFormatterforDay(resultDay);
@@ -227,9 +227,9 @@ function dateFormatterforDaysAgo(value) {
 /**获取count天前的日期和当天日期
  * @param count 多少天
  */
-function timeForMat(count) {
+ function timeForMat(count) {
     let startDate = dateFormatterforDay(new Date()),
-        endDate = dateFormatterforDaysAgo(count);
+    endDate = dateFormatterforDaysAgo(count);
     return {
         t1: endDate,
         t2: startDate
@@ -239,7 +239,7 @@ function timeForMat(count) {
  * 获取当前时间的年月日时分秒并日期格式化
  * @return  格式化后的时间 例如 2017-12-09 11:12:12
  */
-function getCurrentAlldateFormatterforDay() {
+ function getCurrentAlldateFormatterforDay() {
     const JsonDateValue = new Date();
     const hour = getFullDate(JsonDateValue.getHours());
     const minite = getFullDate(JsonDateValue.getMinutes());
@@ -251,17 +251,17 @@ function getCurrentAlldateFormatterforDay() {
  * @param {number} y 当前年
  * @param {number} m 当前月
  */
-function getMouthLastDay(y, m) {
+ function getMouthLastDay(y, m) {
     let day = new Date(y, m, 0),
-        lastDay = dateFormatterforDay(day),
-        lastDaySplit = lastDay.split('-'),
-        cellD = parseInt(lastDaySplit[2]);
+    lastDay = dateFormatterforDay(day),
+    lastDaySplit = lastDay.split('-'),
+    cellD = parseInt(lastDaySplit[2]);
     return cellD;
 }
 /**格式化日期为Date 
  * @param {string} value 2017-12-09 
  */
-function formatTimeForDate(value) {
+ function formatTimeForDate(value) {
     let all: Date;
     if (value) {
         const a = value.split('-');
@@ -275,7 +275,7 @@ function formatTimeForDate(value) {
 /**每三个字符加一个逗号
  * @param num 需要格式化的数据
  */
-function toThousands(num, n ? : number) {
+ function toThousands(num, n ? : number) {
     if (num !== null && num !== undefined) {
         const numSplit = num.toString().split('.');
         const numDor = numSplit[1] ? '.' + numSplit[1].toString() : '';
@@ -289,19 +289,19 @@ function toThousands(num, n ? : number) {
  * @param {string} filter 过滤规则,转义后的字符串
  * @param {string} data 过滤的内容
  */
-function filterCode(filter: string, data: string) {
+ function filterCode(filter: string, data: string) {
     let filters = new RegExp(filter, 'g');
     return filters.test(data);
 }
 
 
 /*四舍五入并保留2位小数*/
-getTwoDecimal(value) {
+function getTwoDecimal(value) {
     let num = Math.round(value * 100) / 100,
-        numString = num.toString(),
-        numSplit = numString.split('.'),
-        len = numSplit.length,
-        result;
+    numString = num.toString(),
+    numSplit = numString.split('.'),
+    len = numSplit.length,
+    result;
     if (len === 1) {
         result = numString + '.00';
     } else if (len === 2 && numSplit[1].length != 2) {
@@ -313,3 +313,57 @@ getTwoDecimal(value) {
     }
     return result;
 }
+
+/**获取随机数
+* @param value 随机的字符串或数组
+* @param len 长度
+* @param num 返回多少个数，默认1位
+*/
+function randomNum(value,len,num=1) {
+    let leng = value.length,
+    code = '';
+    if(num){
+        for(let i=0; i<num; i++){
+            code += value[Math.floor(Math.random()*leng)];
+        }
+
+    }else{
+        code = Math.floor(Math.random()*leng);
+
+    }
+    return code;
+
+}
+
+/*筛选字符串中出现次数最多的字符*/
+// 传统写法
+function max(str){
+    var json={};
+    var num=0;
+    var value=null;
+    for(var i=0;i<str.length;i++){
+        var k=str[i];
+        if(!json[k]){
+            json[k]=[];
+        }
+        json[k].push(k);
+    }
+    for(var attr in json){
+        if(num<json[attr].length){
+            num=json[attr].length;
+            value=json[attr][0];
+        }
+    }
+    alert("出现最多的字符是:"+value+',出现次数是:'+num);
+};
+// 正则表达式写法
+function max(str){
+    var num=0,value=null,new_str=str.split("").sort().join(""),re=/(\w)\1+/g; //没有\1,re就是一整个排好序的字符串，有了\1就是出现过的有重复的取出来，\1表示跟前面第一个子项是相同的
+    new_str.replace(re,function($0,$1){ //$0代表取出来重复的一个个整体，如[s,s...],[f,f..],[d,d....] $1代表这个整体里的字符
+        if(num<$0.length){
+            num=$0.length;
+            value=$1
+        }
+    });
+    alert(value+":"+num)
+};

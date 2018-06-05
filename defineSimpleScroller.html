@@ -1,0 +1,33 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <title></title> 
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head> 
+<body> 
+    <div class="scroll-wrap">
+    	<p class="content" id="conte">
+         就结束了，一些具体细节，例如关于HTML部分，或者动画的实现等，可以去demo等查看代码展示。
+
+不过从效果来看，IE6以及IE7浏览器下的滚动并没有hold页面的滚动条，多番其他尝试也是如此，希望可以有相关经验的同行指点下，优化IE7/IE7浏览器下的体验效果。
+
+原本还想再添加一个自定义滚动条的demo的，一看时间，我勒个去，已经1:11:11了，好不吉利的数字啊，看了下程序员运势万年历，今天不适宜写demo。于是，结语睡觉。
+五、首尾呼应的结语
+
+正常状态鼠标滚轮相关东西，我现在各个细节历历在目，要是现在发我张卷子，考鼠标滚轮事件知识，没有个90分我自己都不信。然而，目前为止，自己并未刻意去记忆，因此，如果接下来的1年时间自己很少或不接触相关内容。估计到时别人一问，小心脏一慌，说不定就一下子想不起"DOMMouseScroll"这厮了。因此，在结尾处，我要给自己来个特殊记忆。
+
+怎么记呢？恩……啊，抓狂了，想不出来。event.wheelDelta/event.detail
+
+wheelDelta→滚轮的三角裤，火狐是骚狐狸，没有这个三角裤？欲知详情，请看火狐？   
+        </p>
+        <div class="scoll"></div>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/defineSimpleScroller.js"></script>
+    <script>
+    	var init = new init($('.scroll-wrap'),$('.content'),$('.scoll'));
+    </script>
+</body> 
+
+</html>
