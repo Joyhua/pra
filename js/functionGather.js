@@ -181,6 +181,15 @@ function idCardRex(string) {
     return false;
 }
 /*身份证校验 end*/
+ /**
+    * 判断是否输入汉字和空格
+    * @param val 待验证的字符串
+    */
+    function isCheckChineseAndBlank(val) {
+        // const reg = new RegExp('[\u0391-\uFFE5]+|\s+', 'g');
+        return /[\u0391-\uFFE5]+|\s+/.test(val);
+    }
+
 // 只能有数字和字母
 function isOnlyNumberAndLetter(str) {
     const myreg = /^[0-9a-zA-Z]*$/;
@@ -271,6 +280,24 @@ function isOnlyNumberAndLetter(str) {
         all = new Date(b, c, d);
     }
     return all;
+}
+
+ /**格式化时间为2017/05/07
+     * @param value 时间 格式化为2017-05-07
+     * @returns 2017/05/07
+     */
+     function formatDateForYearMonthDay(value) {
+        return value.replace(/-/g, '/');
+    }
+
+/**获取n个月前的日期，格式为Date
+   * @param {number} n 多少个月前
+   */
+   function getBeforeDate(n: number) {
+    let result: Date;
+    const current: Date = new Date();
+    result = new Date(current.setMonth(current.getMonth() + 1 - n));
+    return result;
 }
 /**每三个字符加一个逗号
  * @param num 需要格式化的数据
@@ -367,3 +394,95 @@ function max(str){
     });
     alert(value+":"+num)
 };
+
+/**
+     *数组深拷贝
+     *
+     * @param {*} obj
+     * @returns
+     * @memberof FormatterModel
+     */
+     function getType(obj) {
+        //tostring会返回对应不同的标签的构造函数
+        var toString = Object.prototype.toString;
+        var map = {
+            '[object Boolean]': 'boolean',
+            '[object Number]': 'number',
+            '[object String]': 'string',
+            '[object Function]': 'function',
+            '[object Array]': 'array',
+            '[object Date]': 'date',
+            '[object RegExp]': 'regExp',
+            '[object Undefined]': 'undefined',
+            '[object Null]': 'null',
+            '[object Object]': 'object'
+        };
+        if (obj instanceof Element) {
+            return 'element';
+        }
+        return map[toString.call(obj)];
+    }
+    function deepClone(data) {
+        var type = getType(data);
+        var obj;
+        if (type === 'array') {
+            obj = [];
+        } else if (type === 'object') {
+            obj = {};
+        } else {
+            //不再具有下一层次
+            return data;
+        }
+        if (type === 'array') {
+            for (var i = 0, len = data.length; i < len; i++) {
+                obj.push(this.deepClone(data[i]));
+            }
+        } else if (type === 'object') {
+            for (var key in data) {
+                obj[key] = this.deepClone(data[key]);
+            }
+        }
+        return obj;
+    }
+
+      /**
+     * 判断是否是手机号
+     * @param val 要判断的数
+     */
+    function isPoneAvailable(str) {
+        const myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
+        if (!myreg.test(str)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    /**
+     * 判断是否正浮点数
+     * @param val 要判断的数
+     */
+    function postitiveFloatPoint(val) {
+        const reg = new RegExp('^(([0-9]+\\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\\.[0-9]+)|([0-9]*[1-9][0-9]*))$');
+        if (reg.test(val)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**0和正整数
+     * @param data 数据
+     */
+    function isNumber(data) {
+        const numberFilter = /(^[0]{1}$)|(^[1-9]+[0-9]*$)/;
+        return numberFilter.test(data);
+    }
+
+    /**正数
+     * @param data 数据
+    */
+    function isPositiveNumber(data) {
+        const dataNumber = /^([1-9]\d*\.\d*|0\.\d+|[1-9]\d*|0)$/;
+        return dataNumber.test(data);
+    }
